@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
         Application.targetFrameRate = 60;
     }
 
@@ -25,6 +26,12 @@ public class Movement : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             rb.position = touch.deltaPosition * movespeed + rb.position;
+            if(rb.position.x > 2f) rb.position = new Vector2(2f, rb.position.y);
+            if(rb.position.x < -2f) rb.position = new Vector2(-2f, rb.position.y);
+            if(rb.position.y > 4.75f) rb.position = new Vector2(rb.position.x, 4.75f);
+            if(rb.position.y < -4.75f) rb.position = new Vector2(rb.position.x, -4.75f);
+            Debug.Log(rb.position);
+            
         }
     }
 }

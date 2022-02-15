@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "90adaaba",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 10438,
+        "processId": 13530,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -18,6 +18,60 @@
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 10438,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 21529,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 23870,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 25628,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 26997,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 30720,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 2967,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 9817,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 12396,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13530,
             "exited": false
         }
     ],
