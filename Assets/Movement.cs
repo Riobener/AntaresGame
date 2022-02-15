@@ -6,9 +6,9 @@ public class Movement : MonoBehaviour
 {
 
 
-    private Vector3 touchPosition;
+    
     private Rigidbody2D rb;
-    private Vector3 direction;
+    
     private float movespeed = 0.0065f;
 
     // Start is called before the first frame update
