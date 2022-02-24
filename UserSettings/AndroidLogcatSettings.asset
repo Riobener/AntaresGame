@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "90adaaba",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 28847,
+        "processId": 32051,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -109,6 +109,54 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 28847,
             "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 30581,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13899,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 31086,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 28595,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 29957,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 30734,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 31519,
+            "exited": false
+        },
+        {
+            "deviceId": "90adaaba",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 32051,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -159,7 +207,7 @@
             true
         ],
         "MemoryGroup": 2,
-        "Behavior": 0
+        "Behavior": 2
     },
     "m_Filter": "",
     "m_FilterIsRegularExpression": false,

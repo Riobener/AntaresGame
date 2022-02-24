@@ -29,12 +29,22 @@ public class Movement : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            rb.position = touch.deltaPosition * movespeed + rb.position;
-            if (rb.position.x > lrBoarder) rb.position = new Vector2(lrBoarder, rb.position.y);
-            if (rb.position.x < -lrBoarder) rb.position = new Vector2(-lrBoarder, rb.position.y);
-            if (rb.position.y > udBoarder) rb.position = new Vector2(rb.position.x, udBoarder);
-            if(rb.position.y < -udBoarder) rb.position = new Vector2(rb.position.x, -udBoarder);
-
+            move(touch);
+            checkScreenBoarders(rb.position.x, rb.position.y);
         }
+    }
+
+    void move(Touch touch)
+    {
+        rb.position = touch.deltaPosition * movespeed + rb.position;
+    }
+
+
+    void checkScreenBoarders(float x, float y)
+    {
+        if (x > lrBoarder) rb.position = new Vector2(lrBoarder, y);
+        if (x < -lrBoarder) rb.position = new Vector2(-lrBoarder, y);
+        if (y > udBoarder) rb.position = new Vector2(x, udBoarder);
+        if (y < -udBoarder) rb.position = new Vector2(x, -udBoarder);
     }
 }
