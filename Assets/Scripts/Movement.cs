@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,45 +7,50 @@ public class Movement : MonoBehaviour
 {
 
 
-    
-    private Rigidbody2D rb;
-    private float lrBoarder;
-    private float udBoarder;
-    private float movespeed = 0.0065f;
 
+
+    private float _lrBoarder;
+
+    private float _udBoarder;
+    private Vector2 _startPos;
+    private Vector2 _endPos;
+    private Vector2 _firstTouchPos;
+
+   
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        var localScale = transform.localScale; 
         Vector3 screenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        lrBoarder = screenSize.x - (transform.localScale.x / 2);
-        udBoarder = screenSize.y - (transform.localScale.y / 2);
+        _lrBoarder = screenSize.x - (localScale.x / 2);
+        _udBoarder = screenSize.y - (localScale.y / 2);
+         
         Application.targetFrameRate = 60;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+
+    private void FixedUpdate()
+    {
+        Move();
+        var position = transform.position;
+        position = new Vector3
+        (
+            Mathf.Clamp(position.x, -_lrBoarder, _lrBoarder),
+            Mathf.Clamp(position.y, -_udBoarder, _udBoarder),
+            position.z
+
+        );
+        transform.position = position;
+    }
+
+    void Move()
+    {
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            move(touch);
-            checkScreenBoarders(rb.position.x, rb.position.y);
+            transform.Translate(touch.deltaPosition.x * 5 / Screen.width,touch.deltaPosition.y * 10 / Screen.height ,0,Space.World);
         }
-    }
-
-    void move(Touch touch)
-    {
-        rb.position = touch.deltaPosition * movespeed + rb.position;
-    }
-
-
-    void checkScreenBoarders(float x, float y)
-    {
-        if (x > lrBoarder) rb.position = new Vector2(lrBoarder, y);
-        if (x < -lrBoarder) rb.position = new Vector2(-lrBoarder, y);
-        if (y > udBoarder) rb.position = new Vector2(x, udBoarder);
-        if (y < -udBoarder) rb.position = new Vector2(x, -udBoarder);
     }
 }
