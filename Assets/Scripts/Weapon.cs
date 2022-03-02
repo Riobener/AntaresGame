@@ -6,13 +6,15 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public int fireSpeed = 10; // ”меньшать число дл€ увелечени€ скорострельности и наоборот
-    // Update is called once per frame
+    public int fireSpeed = 10; 
     void Update()
     {
-        //ограничение скорострельности  
-        if (Time.frameCount % fireSpeed == 0) { 
-            Shoot();
+        if (Input.touchCount > 0)
+        {
+            if (Time.frameCount % fireSpeed == 0)
+            {
+                Shoot();
+            }
         }
     }
 
