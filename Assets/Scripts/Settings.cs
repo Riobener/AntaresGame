@@ -19,12 +19,12 @@ public class Settings : MonoBehaviour
     public Button ActvibrationBtn;
     public Button ActmusicBtn;
     
-    public bool IsSound;
-    public bool IsVibration;
-    public bool IsMusic;
-    public bool IsActSound;
-    public bool IsActVibration;
-    public bool IsActMusic;
+    private bool IsSound;
+    private bool IsVibration;
+    private bool IsMusic;
+    private bool IsActSound;
+    private bool IsActVibration;
+    private bool IsActMusic;
     
     
     private String _language;
@@ -81,5 +81,42 @@ public class Settings : MonoBehaviour
         music.text = _music;
         sound.text = _sound;
     }
+
+
+    public Image settingsBG;
+    public GameObject menuCentre;
+    public Button activeSettingBtn;
+    public Button SettingBtn;
+    public Animator closeAnimation;
+    public Animator openAnimation;
+    public void closeSettings()
+    {
+        SettingBtn.gameObject.SetActive(true);
+        closeAnimation.SetTrigger("Close");
+    }
+    public void closedSettings()
+    {
+        menuCentre.SetActive(true);
+        settingsBG.gameObject.SetActive(false);
+        activeSettingBtn.gameObject.SetActive(false);
+    }
+    
+    public void openSettings()
+    {
+        menuCentre.SetActive(false);
+        activeSettingBtn.gameObject.SetActive(true);
+        settingsBG.gameObject.SetActive(true);
+        openAnimation.SetTrigger("Open");
+    }
+    public void openedSettings()
+    {
+        
+        settingsBG.rectTransform.anchoredPosition.Set(0f,-30f);
+        settingsBG.rectTransform.sizeDelta.Set(-240f,-900f);
+        SettingBtn.gameObject.SetActive(false);
+    }
+
+    
+    
     
 }
