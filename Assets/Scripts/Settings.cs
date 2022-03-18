@@ -11,7 +11,8 @@ public class Settings : MonoBehaviour
     public Text settings;
     public Text vibration;
     public Text music;
-    
+
+    public Dictionary<String, Text> Texts;
     public Button soundBtn;
     public Button vibrationBtn;
     public Button musicBtn;
@@ -34,6 +35,7 @@ public class Settings : MonoBehaviour
     private String _music;
     public void changeLanguage()
     {
+        Texts.Add("language", null);
         if (language.text.Equals("english"))
         {
             language.text = "русский";
@@ -91,26 +93,27 @@ public class Settings : MonoBehaviour
     public Animator openAnimation;
     public void closeSettings()
     {
+        menuCentre.SetActive(true);
         SettingBtn.gameObject.SetActive(true);
         closeAnimation.SetTrigger("Close");
     }
     public void closedSettings()
     {
-        menuCentre.SetActive(true);
+        
         settingsBG.gameObject.SetActive(false);
         activeSettingBtn.gameObject.SetActive(false);
     }
     
     public void openSettings()
     {
-        menuCentre.SetActive(false);
+        
         activeSettingBtn.gameObject.SetActive(true);
         settingsBG.gameObject.SetActive(true);
         openAnimation.SetTrigger("Open");
     }
     public void openedSettings()
     {
-        
+        menuCentre.SetActive(false);
         settingsBG.rectTransform.anchoredPosition.Set(0f,-30f);
         settingsBG.rectTransform.sizeDelta.Set(-240f,-900f);
         SettingBtn.gameObject.SetActive(false);
