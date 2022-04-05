@@ -5,16 +5,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
-
-
-
+    
     private float _lrBoarder;
-
     private float _udBoarder;
-    private Vector2 _startPos;
-    private Vector2 _endPos;
-    private Vector2 _firstTouchPos;
 
    
     // Start is called before the first frame update
@@ -24,9 +17,10 @@ public class Movement : MonoBehaviour
         Vector3 screenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         _lrBoarder = screenSize.x - (localScale.x / 2);
         _udBoarder = screenSize.y - (localScale.y / 2);
-         
         Application.targetFrameRate = 60;
 
+        Debug.Log(localScale.x);
+        Debug.Log(localScale.y);
     }
 
 
