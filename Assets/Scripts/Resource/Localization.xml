@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Elements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<element name="LangText">
+		<translets>
+			<RU>русский</RU>
+			<EN>english</EN>
+		</translets>
+	</element>
+	<element name="VibrText">
+		<translets>
+			<RU>вибрация</RU>
+			<EN>vibration</EN>
+		</translets>
+	</element>
+	<element name="MusText">
+		<translets>
+			<RU>музыка</RU>
+			<EN>music</EN>
+		</translets>
+	</element>
+	<element name="SndText">
+		<translets>
+			<RU>звук</RU>
+			<EN>sound</EN>
+		</translets>
+	</element>
+	<element name="SettingsText">
+		<translets>
+			<RU>НАСТРОЙКИ</RU>
+			<EN>SETTINGS</EN>
+		</translets>
+	</element>
+</Elements>
