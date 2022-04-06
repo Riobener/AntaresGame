@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Xml;
 public class Settings : MonoBehaviour
 {
     public Text language;
@@ -35,6 +35,7 @@ public class Settings : MonoBehaviour
     private String _music;
     public void changeLanguage()
     {
+
         Texts.Add("language", null);
         if (language.text.Equals("english"))
         {
