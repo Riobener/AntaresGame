@@ -1,23 +1,20 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 
 public class LocalizationManager : MonoBehaviour
 {
-    
-    public static int SelectedLanguage { get; private set; }
+    private static int SelectedLanguage { get; set; }
     public static event LanguageChangeHandler OnLanguageChange;
 
     public delegate void LanguageChangeHandler();    
-    private static Dictionary<string, List<string>> localization;
+    private static Dictionary<string, List<string>> _localization;
 
     [SerializeField] private TextAsset _textFile;
 
     private void Awake()
     {
-        if (localization == null)
+        if (_localization == null)
             LoadLocalization();
     }
     public void SetLanguage(int id)
@@ -27,7 +24,7 @@ public class LocalizationManager : MonoBehaviour
     }
     private void LoadLocalization()
     {
-        localization = new Dictionary<string, List<string>>();
+        _localization = new Dictionary<string, List<string>>();
 
         XmlDocument xmlDocument = new XmlDocument();
         xmlDocument.LoadXml(_textFile.text);
@@ -41,7 +38,7 @@ public class LocalizationManager : MonoBehaviour
                 values.Add(translate.InnerText);
             }
 
-            localization[elementStr] = values;
+            _localization[elementStr] = values;
         }
     }
 
@@ -52,9 +49,9 @@ public class LocalizationManager : MonoBehaviour
             languageID = SelectedLanguage;
         }
 
-        if (localization.ContainsKey(key))
+        if (_localization.ContainsKey(key))
         {
-            return localization[key][languageID];
+            return _localization[key][languageID];
         }
 
         return key;

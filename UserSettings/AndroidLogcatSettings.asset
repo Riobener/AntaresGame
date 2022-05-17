@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "90adaaba",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 19680,
+        "processId": 21649,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,121 +11,55 @@
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 26707,
+            "processId": 7775,
             "exited": true
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 16135,
+            "processId": 9248,
             "exited": true
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 6534,
+            "processId": 10578,
             "exited": true
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 8261,
+            "processId": 12208,
             "exited": true
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 7055,
+            "processId": 1152,
             "exited": true
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.vkontakte.android",
-            "processId": 25242,
-            "exited": false
         },
         {
             "deviceId": "90adaaba",
             "name": "com.miui.home",
-            "processId": 16346,
+            "processId": 2912,
             "exited": false
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 9139,
+            "processId": 31215,
             "exited": false
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 11133,
+            "processId": 20077,
             "exited": false
         },
         {
             "deviceId": "90adaaba",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 12202,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 16462,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 17575,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 18073,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 18739,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 18416,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 19339,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 13908,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 14758,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 16310,
-            "exited": false
-        },
-        {
-            "deviceId": "90adaaba",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 19680,
+            "processId": 21649,
             "exited": false
         }
     ],

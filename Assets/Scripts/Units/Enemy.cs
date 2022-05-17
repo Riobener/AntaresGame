@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Unit
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Move()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Attack()
     {
         
     }

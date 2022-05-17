@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Xml;
+
 public class Settings : MonoBehaviour
 {
     public Text language;
@@ -33,29 +32,7 @@ public class Settings : MonoBehaviour
     private String _settings;
     private String _vibration;
     private String _music;
-    public void changeLanguage()
-    {
-
-        Texts.Add("language", null);
-        if (language.text.Equals("english"))
-        {
-            language.text = "русский";
-            settings.text = "настройки";
-            vibration.text = "вибрация";
-            music.text = "музыка";
-            sound.text = "звуки";
-        }
-        else
-        {
-            language.text = "english";
-            settings.text = "Settings";
-            vibration.text = "vibration";
-            music.text = "music";
-            sound.text = "sound";
-        }
-    }
-
-    public void SaveCondition()
+    public void SaveSettings()
     {
         IsSound = soundBtn.IsActive();
         IsVibration = vibrationBtn.IsActive();
@@ -70,7 +47,7 @@ public class Settings : MonoBehaviour
         _sound = sound.text;
     }
 
-    public void dontSave()
+    public void DontSaveSettings()
     {
         soundBtn.gameObject.SetActive(IsSound); 
         vibrationBtn.gameObject.SetActive(IsVibration);
@@ -92,6 +69,7 @@ public class Settings : MonoBehaviour
     public Button SettingBtn;
     public Animator closeAnimation;
     public Animator openAnimation;
+   
     public void closeSettings()
     {
         menuCentre.SetActive(true);

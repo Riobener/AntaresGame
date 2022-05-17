@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class Player : Unit
 {
@@ -11,9 +9,12 @@ public class Player : Unit
     [SerializeField]private Weapon _currentWeapon;
     private float _lrBoarder;
     private float _udBoarder;
-
+    [SerializeField]private const float FireRate = 0.001f;
+    private float _nextFire = 0.0f;
+    
     private void Start()
     {
+      
         _currentWeapon = _weapons[0];
         var localScale = transform.localScale; 
         Vector3 screenSize = Camera.main!.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
@@ -21,13 +22,13 @@ public class Player : Unit
         _udBoarder = screenSize.y - (localScale.y * 5);
         Application.targetFrameRate = 60;
     }
-
-    // Update is called once per frame
-
+    
+    
     private void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && Time.time > _nextFire)
         {
+            _nextFire = Time.time + FireRate;
             Attack();
         }
     }
