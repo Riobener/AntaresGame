@@ -25,6 +25,5 @@ public class Blaster : Weapon
     {
         audioSource.Play();
         audioSource.PlayOneShot(audioSource.clip);
-        // audioSource.PlayOneShot(soundOfShot);
     }
 }
