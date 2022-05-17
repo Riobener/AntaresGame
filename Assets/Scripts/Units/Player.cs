@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : Unit
@@ -9,7 +10,7 @@ public class Player : Unit
     [SerializeField]private Weapon _currentWeapon;
     private float _lrBoarder;
     private float _udBoarder;
-    [SerializeField]private const float FireRate = 0.001f;
+    private const float FireRate = 0.1f;
     private float _nextFire = 0.0f;
     
     private void Start()
@@ -65,4 +66,5 @@ public class Player : Unit
     {
         _currentWeapon.Shoot(_firePoint);
     }
+    
 }

@@ -12,11 +12,10 @@ public class Blaster : Weapon
 
     public override void Shoot(Transform firePoint)
     {
-        if (Time.frameCount % fireSpeed == 0)
-        {
+
             Instantiate(bullet, firePoint.position, Quaternion.identity);
             PlaySoundOfShot();
-        }
+
 
         
     }
